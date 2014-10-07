@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-	<h1 class="jumbotron">World Cup Matches</h1>
+	<h1 class="jumbotron">World Cup Matches</h1>	
 
 	<section class="row">
 		<section class="fixtures col-md-8">

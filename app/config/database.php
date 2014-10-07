@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'sportsball',
+			'database'  => 'awks',
 			'username'  => 'root',
 			'password'  => 'ls55ftc',
 			'charset'   => 'utf8',

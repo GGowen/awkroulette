@@ -20,7 +20,7 @@ class HomeController extends BaseController {
 	public function showClient()
 	{
 		return $this->layout->content = View::make('client', [
-			
+			'test' => 'alex'
 		]);
 	}
 

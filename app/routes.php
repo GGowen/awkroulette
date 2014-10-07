@@ -13,4 +13,12 @@
 
 Route::get('/', 'HomeController@showClient');
 
+Route::group(['prefix' => 'user'],function(){
+
+	Route::get('/','HomeController@showClient');
+
+	Route::post('new','UserController@createSingle');
+
+});
+
 
