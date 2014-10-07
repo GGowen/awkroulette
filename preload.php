@@ -19,11 +19,7 @@ function __loadResources() {
 
 }
 
-<<<<<<< Updated upstream
 $db = new db();
 $session = new session();
-=======
-//$db = new db();
->>>>>>> Stashed changes
 
 ?>
