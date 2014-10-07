@@ -1,0 +1,49 @@
+.container{
+	margin: 0 auto;
+	width: 600px;
+}
+
+h1{
+	text-align: center;
+}
+
+body *{
+
+	font-family: bebas, Tahoma, Geneva, sans-serif;;
+}
+
+.tel {
+	width: 75%;
+	border-radius: 0px;
+	height: 35px;
+	border: 1px solid black;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 20px;
+
+}
+
+.submit * {
+	box-shadow: none;
+}
+
+.submit {
+	width: 23%;
+	height: 35px;
+	-webkit-border-radius: 0px;
+	border:1px solid black;
+}
+
+.submit:over {
+	width: 23%;
+	-webkit-border-radius: 0px;
+	border:1px solid black;
+	box-shadow: none;
+}
+
+.submit:press {
+	width: 23%;
+	-webkit-border-radius: 0px;
+	border:1px solid black;
+	background-color: 
+}
