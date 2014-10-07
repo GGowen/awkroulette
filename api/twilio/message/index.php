@@ -1,19 +1,20 @@
 <?php 
 
-include($_SERVER['DOCUMENT_ROOT'] . 'preload.php');		
+//include($_SERVER['DOCUMENT_ROOT'] . 'preload.php');		
 		
+global $message;
+
 $config = GetConfig('twilio');
  
 $client = new Services_Twilio($config['sid'], $config['token']);
  
-$message = $client->account->messages->create([
+$msg = $client->account->messages->create([
     "From" => $config['caller'],
-    "To" => "07837976039",
-    "Body" => "Test message!",
+    "To" => $_REQUEST['phone'] ? $_REQUEST['phone'] : $_SESSION['user']->phonenumber,
+    "Body" => $message,
 ]);
 
 // Display a confirmation message on the screen
-echo "Sent message {$message->sid}";
-
+echo "Sent message {$message}";
 
 ?>

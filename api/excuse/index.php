@@ -50,4 +50,6 @@ $phrases = [
 	"I need to go and " . $activities[array_rand($activities)] . " my " . $people[array_rand($people)]
 ];
 
-echo $phrases[array_rand($phrases)];
+$message = $phrases[array_rand($phrases)];
+
+requireAbs("api/twilio/message/index.php");
