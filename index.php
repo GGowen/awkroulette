@@ -25,6 +25,7 @@
 			<form class="form-signin" role="form">
 				<h2 class="form-signin-heading">Please sign in</h2>
 				<input type="text" class="form-control" placeholder="username" required autofocus>
+				<input type="password" class="form-control" placeholder="password" required autofocus>
 				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
 			</form>
 		</div>
@@ -32,8 +33,10 @@
 
 		<div id="create-account-block">
 			<form class="form-create-acc" role="form">
-				<h2 class="form-signin-heading">Create a new account</h2>
+				<h3 class="form-signin-heading">Create a new account</h2>
 				<input type="text" class="form-control" placeholder="username" required autofocus>
+				<input type="password" class="form-control" placeholder="password" required autofocus>
+				<input type="password" class="form-control" placeholder="repeat password" required autofocus>
 				<input type="text" class="form-control" placeholder="07889045404" required autofocus>
 				<button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
 			</form>
