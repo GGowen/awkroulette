@@ -17,5 +17,6 @@ function __loadResources() {
 }
 
 $db = new db();
+$session = new session();
 
 ?>
