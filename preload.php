@@ -2,11 +2,16 @@
 
 include( $_SERVER['DOCUMENT_ROOT'] . 'helpers/db.php' );
 
-function __autoload($class_name) {	
+function default_autoload($class_name) {	
 	
-	$includePath = requireAbs('/classes/' . $class_name . '.php');
+	if (!preg_match('/Twilio/',$class_name))
+	{		
+		$includePath = requireAbs('/classes/' . $class_name . '.php');
+	}	
 	
 }
+
+spl_autoload_register('default_autoload');
 
 function __loadResources() {
 
