@@ -22,4 +22,6 @@ function __loadResources() {
 $db = new db();
 $session = new session();
 
+requireAbs('resources/twilio-php-master/Services/Twilio.php');
+
 ?>
