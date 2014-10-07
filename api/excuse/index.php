@@ -50,4 +50,20 @@ $phrases = [
 	"I need to go and " . $activities[array_rand($activities)] . " my " . $people[array_rand($people)]
 ];
 
-echo $phrases[array_rand($phrases)];
+?>
+
+<html>
+	<head>
+		<link rel="stylesheet" href="/Excuses/styles/main.css">
+	</head>
+	<body>
+		<div class="container">
+			<div style="margin-top: 60px;"></div>
+			<div><?php echo $phrases[array_rand($phrases)];?></div>
+		</div>
+	</body>
+
+</html>
+
+
+
