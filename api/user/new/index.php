@@ -1,5 +1,9 @@
 <?php 
 
+// Requires
+// $username
+// $password
+// $phonenumber
 include($_SERVER['DOCUMENT_ROOT'] . 'preload.php');
 
 $db->insert([
@@ -7,5 +11,7 @@ $db->insert([
 	'fields' => 'username,password,phonenumber',
 	'values' => "'{$_REQUEST['username']}' , '{$_REQUEST['password']}' , '{$_REQUEST['phone']}'"
 ]);
+
+
 
 ?>
