@@ -10,13 +10,20 @@ function __autoload($class_name) {
 
 function __loadResources() {
 
-	echo('<link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css"/>');
-	echo('<script src="resources/bootstrap/js/bootstrap.min.js"></script>');
-	echo('<script src="resources/jquery/jquery-2.1.1.min.js"></script>');
+	echo '<script src="resources/jquery/jquery-2.1.1.min.js"></script>';
+	echo '<link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css"/>';
+	echo '<script src="resources/bootstrap/js/bootstrap.min.js"></script>';
+	
+
+	echo '<link rel="stylesheet" href="styles/main.css"/>';
 
 }
 
+<<<<<<< Updated upstream
 $db = new db();
 $session = new session();
+=======
+//$db = new db();
+>>>>>>> Stashed changes
 
 ?>
