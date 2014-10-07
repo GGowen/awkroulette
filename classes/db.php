@@ -5,7 +5,7 @@ class db extends mysqli {
     private $connection;
 
     public function __construct() {
-        $this->config = getConfig('db');             
+        $this->config = GetConfig('db');             
     }
     private function setup() {
         $this->connection = parent::__construct(
@@ -38,7 +38,7 @@ class db extends mysqli {
             $sql .= " (" . $args['fields'] . ")";
         }
 
-        $sql .= " VALUES ({$args['values']})";
+        $sql .= " VALUES ({$args['values']})";        
         return $this->query($sql);
     }
     public function select($args) {
