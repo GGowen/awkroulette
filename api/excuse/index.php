@@ -2,6 +2,16 @@
 
 include($_SERVER['DOCUMENT_ROOT'] . 'preload.php');
 
+$items = [
+	'clothes',
+	'food',
+	'alcohol',
+	'water',
+	'pets',
+	'my laptop',
+	'my car'
+];
+
 $verbs = [
 	'waiting',
 	'angry',
@@ -19,7 +29,10 @@ $places = [
 	'the pub',
 	'the other party',
 	'school',
-	'work'	
+	'work',
+	'the toilet',
+	'home',
+	'the toilet store'	
 ];
 
 $people = [
@@ -31,7 +44,12 @@ $people = [
 	'brother',
 	'friend',
 	'vicar',
-	'boss'
+	'boss',
+	'mate',
+	'mum',
+	'dad',
+	'colleague',
+	'probation officer'
 ];
 
 $activities = [
@@ -41,13 +59,16 @@ $activities = [
 	'have dinner with',
 	'seduce',
 	'meet',
-	'kill'
+	'kill',
+	'go shopping with',
+	'wash my hair with'
 ];
 
 $phrases = [
 	"I have to go to the " . $places[array_rand($places)],
 	'My ' . $people[array_rand($people)] . ' is ' . $verbs[array_rand($verbs)],
-	"I need to go and " . $activities[array_rand($activities)] . " my " . $people[array_rand($people)]
+	"I need to go and " . $activities[array_rand($activities)] . " my " . $people[array_rand($people)],
+	"I need to get " . $items[array_rand($items)] . " from " . $places[array_rand($places)]
 ];
 
 $message = $phrases[array_rand($phrases)];
