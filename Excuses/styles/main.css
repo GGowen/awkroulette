@@ -1,15 +1,17 @@
 .container{
 	margin: 0 auto;
+	margin-top: 45px;
 	width: 600px;
 }
 
 h1{
 	text-align: center;
+	margin-bottom: 40px;
 }
 
 body *{
 
-	font-family: bebas, Tahoma, Geneva, sans-serif;;
+	font-family: helvetica, Tahoma, Geneva, sans-serif;;
 }
 
 .tel {
@@ -20,6 +22,7 @@ body *{
 	padding-left: 25px;
 	padding-right: 25px;
 	font-size: 20px;
+	margin-top: 15px;
 
 }
 
@@ -32,6 +35,9 @@ body *{
 	height: 35px;
 	-webkit-border-radius: 0px;
 	border:1px solid black;
+	font-size: 20px;
+	background-color: black;
+	color: white;
 }
 
 .submit:over {
