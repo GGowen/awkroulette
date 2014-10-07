@@ -1,20 +1,16 @@
 @extends('layouts.master')
 
 @section('content')
-	<h1 class="jumbotron">World Cup Matches</h1>	
 
-	<section class="row">
-		<section class="fixtures col-md-8">
+<section>
 
-			<h2>Ongoing Fixtures</h2>
-					
-		</section>
+	<form class="form-signin" role="form">
+	<h2 class="form-signin-heading">Awks Roulette</h2>
+		<input type="username" class="form-control" placeholder="username" required autofocus>
+		<input type="password" class="form-control" placeholder="Password" required>
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+	</form>
 
-		<section id="ticker" class="col-md-4">
-
-			<h2>Latest Events</h2>
-			
-		</section>
-	</section>
+</section>
 
 @stop
