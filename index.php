@@ -4,62 +4,53 @@
 
 <?php include('preload.php'); ?>
 
-<?php echo(__loadResources());?>
+<?php 
+echo(__loadResources());
+
+if($_SESSION['user']){
+	echo "<div class='alert alert-success' role='alert'>";
+	echo "<div class='container'>";
+	echo "<div class='row'>";
+	echo "<div class='col-xs-4'>Currently logged in</div>";
+	echo "<div class='col-md-offset-6 col-xs-2'><button onclick='logout()' type='button' class='btn btn-default'>Log Out</button></div>";
+	echo "</div>";
+	echo "</div>";
+	echo "</div>";
+};
+
+
+?>
 
 
 
 <div class="container">
 	<div class="header">
-		<h1 stlye="tetx">Awk Roullette</h1>
+		<h1 stlye="tetx">Awks Roullette</h1>
 	</div>
 
-	<div class="login">
-		
-		<div class="row">
-			<div class="col-xs-6"><button class="btn btn-lg btn-block" onClick="showRegisterBlock()">Register</button></div>
-			<div class="col-xs-6"><button class="btn btn-lg btn-block" onclick="showSignInBlock()">Sign in</button></div>
-			
-		</div>
-		
-		
-		<div id="sign-in-block">
-			<form class="form-signin" role="form" action="api/user/login/index.php" type="get">
-				<h2 class="form-signin-heading">Please sign in</h2>
-				<input type="text" class="form-control" placeholder="username" required autofocus>
-				<input type="password" class="form-control" placeholder="password" required autofocus>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
-			</form>
-		</div>
-		
+	<?php ?>
 
-		<div id="create-account-block">
-			<form class="form-create-acc" role="form" action="api/user/new/index.php" type="get">
-				<h3 class="form-signin-heading">Create a new account</h2>
-				<input type="text" class="form-control" placeholder="username" name="username"  required autofocus>
-				<input type="password" class="form-control" placeholder="password" name="password" required autofocus>
-				<input type="text" class="form-control" placeholder="07889045404" name="phone"  required autofocus>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
-			</form>
-		</div>
-		
-		
-	</div>
+
 </div>
 
-<script>
+	<script>
 
-	$('#create-account-block').hide();
-	$('#sign-in-block').hide();
-
-	function showSignInBlock(){
-		$('#sign-in-block').show();
 		$('#create-account-block').hide();
-	}
-
-	function showRegisterBlock(){
-		$('#create-account-block').show();
 		$('#sign-in-block').hide();
-	}
 
-</script>
+		function showSignInBlock(){
+			$('#sign-in-block').show();
+			$('#create-account-block').hide();
+		}
+
+		function showRegisterBlock(){
+			$('#create-account-block').show();
+			$('#sign-in-block').hide();
+		}
+
+		function logout(){
+			window.location.href = "/api/user/logout";
+		}
+
+	</script>
 
